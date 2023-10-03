@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "set NODE_ENV=local&& node server.js",
     "prod": "set NODE_ENV=production&& node server.js",
+    "aws": "NODE_ENV=production node server.js",
     "start-local": "concurrently \"cd ../frontend && npm run dev\" \"npm run dev\"",
     "start": "concurrently \"cd ../frontend && npm run build\" \"npm run prod\""
   },

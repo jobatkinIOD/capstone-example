@@ -11,6 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { NavLink } from 'react-router-dom';
 
+// replace with your list of pages
 const pages = [{link: '/', label: 'Home'}, {link: '/signup', label: 'Register'}, {link: '/users', label: 'Users'}];
 
 // see https://mui.com/material-ui/react-app-bar/
