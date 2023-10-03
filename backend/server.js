@@ -4,6 +4,7 @@ const cors = require('cors') // first do 'npm install cors'
 const path = require('path')
 
 const dotenv = require("dotenv"); // first do 'npm install dotenv'
+console.log(process.env);
 const environment = process.env.NODE_ENV || "local";
 
 dotenv.config({ path: `./.env.${environment}` }); // support multiple environments, see package.json
