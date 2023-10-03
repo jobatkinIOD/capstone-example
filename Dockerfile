@@ -7,10 +7,10 @@ COPY frontend /app/frontend
 # run all subsequent commands relative to the app folder
 WORKDIR /app
 
-# install dependencies and build prod version of frontend. --no-audit is faster to avoid timeouts
+# install backend dependencies --no-audit is faster to avoid timeouts
 RUN npm install --no-audit
-RUN cd frontend && npm install --no-audit && npm run build
-RUN rm -rf frontend/node_modules
+
+# assumes frontend is ALREADY BUILT into dist folder - run 'npm install && npm run build' from frontend PRIOR to building docker image
 
 # set the production environment
 ENV NODE_ENV production
